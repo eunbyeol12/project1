@@ -208,7 +208,7 @@ section h3 {font-size: 20px;}
   font-size: 55px;}
 
 .card .content{background: linear-gradient(to top, rgb(244, 180, 63), transparent);
-  cursor: pointer;}
+}
 
 /* 컨텐츠2 */
 #ABOUT{
@@ -351,8 +351,8 @@ transition-delay: 0.5s;}/* 0.5있다가 올라게해줌  */
   height: inherit;
   border: 1px solid orange;
   border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
-  margin-right: 800px;
-  left:10%;
+  margin-right: 900px;
+  left:5%;
 }
 .square span:nth-child(1){animation: circle 6s linear infinite;}
 .square span:nth-child(2){animation: circle 4s linear infinite reverse;}
@@ -393,7 +393,7 @@ transition-delay: 0.5s;}/* 0.5있다가 올라게해줌  */
   text-align: center;
   font-size: 30px;
   color: green;
-  margin-left: 140px;
+  margin-left: 125px;
   cursor: pointer;
 }
 .square div p{
