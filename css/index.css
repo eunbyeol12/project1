@@ -1,0 +1,430 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'InkLipquid';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ghanachoco';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html{scroll-behavior: smooth;}
+body{color: #222;
+  font-family: 'Merriweather', serif;
+  text-align: center;}
+
+
+/* topbutton */
+.top{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  font-family: 'InkLipquid';
+
+}
+.top a{
+  display: block;
+  width: 60px;
+  height: 60px;
+  font-size: 25px;
+  text-decoration-line: none;
+  color: green;
+}
+.top a:hover{
+  color: orange;
+  font-size: 30px;}
+
+/* header logo */
+/* header */
+  header{
+    width: 100%;
+    height: 90px;
+/*     background-color: rgba(0,0,0,0.1)/* 상단메뉴박스 */ 
+  }
+nav{
+  width: 1200px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gnb{list-style-type: none;}/* 탑메뉴 점 없애기 */
+.gnb a{text-decoration-line: none;}/* 탑메뉴 밑줄 없애기 */
+
+.gnb{display: flex;
+  position: relative;}
+.gnb li{margin: 0 50px;
+  font-family: 'Montserrat', sans-serif; }
+.gnb li a{
+  font-weight:500;
+  font-size: 22px;
+  color:#ddd;
+  position: relative;
+}
+.gnb li a:before{
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: olivedrab;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.gnb li a:hover{color: orange;}
+.gnb li a:hover:before{width: 100%;}
+
+/* main */
+main{
+  width: 100%;
+  height: 800px;
+  background: url(../image/main1.jpg) no-repeat bottom center fixed;
+  background-size: cover;
+  transition: 0.5s;
+  position: relative;
+}
+main:hover{
+  background-image: url(../image/main3.jpg);
+}
+.logo{position: relative;}
+.logo h1 {
+  font-size: 20px;
+  min-width:11px;
+  white-space: nowrap;
+  margin: 0;
+  position:absolute;
+/*   color: #fff; */
+  color:#ddd;
+  top:50%;
+  left:50%;
+  transform: translate(-160%, -50%);
+  font-size: 45px;
+}
+
+.logo h1::before {
+  content: "NONFICTION";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: rgb(145, 56, 56);
+  overflow: hidden;;
+/*   border-right: 1px solid black; */
+  animation: typing 7s  steps(40) infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes typing{
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+section{
+  width: 100%;
+  text-align: center;
+}
+section h2{
+  font-family: 'Merriweather', serif;
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 150px;
+  text-align: center;
+}
+
+section h3, p, strong{
+  font-family: 'Merriweather', serif;}
+  section span{
+    font-family: 'GmarketSansMedium';
+    font-size: 13px;
+}
+section h3 {font-size: 20px;}
+
+/* 컨텐츠1 */
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/*   height: 100vh; */
+}
+.card{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 5px;
+  margin: 50px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.card:hover{
+  transform: translateY(-20px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+#SHOP h2:hover{color: orange;}
+.content{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: #222;
+  text-align: center;
+  width: inherit;
+  height: inherit;
+  padding: 200px 20px 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.content h3, p{line-height: 1px;}
+.card p{ font-family: 'Merriweather', serif;
+  font-weight: bold;}/* 가격글씨 진하게 */
+
+.content h3{color: green;
+  font-weight: bold;
+  margin-top: 10px; }
+.card:hover .content{top: 0;}
+
+#SHOP h2{margin-top: 60px;  
+  color: green;
+  font-size: 55px;}
+
+.card .content{background: linear-gradient(to top, rgb(244, 180, 63), transparent);}
+
+/* 컨텐츠2 */
+#ABOUT{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 250px;
+}
+
+#ABOUT h2{
+  color: green
+}
+#ABOUT h2:hover{color: orange;
+}
+/* h2{margin-bottom: 30px;} */
+.container2{
+  position: relative;
+  border-radius: 7px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+  width: 400px;
+
+}
+.container2 h4{font-size: 22px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: brown;}
+.container2 p{
+  font-family: 'InkLipquid';
+  font-size: 20px; 
+  line-height: 23px;
+  margin-top: 10px;}
+  .container2 span{
+    font-size: 15px;}
+.content2{
+  position: absolute;
+  bottom: -177px;
+  left: 0;
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 280px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.container2:hover .content2{bottom: 0;}
+.container2 img{transition: 0.5s;}
+.container2:hover img{filter:blur(2px);}
+
+
+
+
+
+
+
+
+/* 컨텐츠3 */
+
+.gallery{
+  height: 700px;
+  display: flex;
+  margin-top: 120px;
+}
+.gallery li{
+/*   border-right: 1px solid #ddd; */
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.gallery li:last-child{border-right: none;}
+.gallery li:nth-child(1){background: url(../image/store1-2.jpg) no-repeat center center;}
+.gallery li:nth-child(2){background: url(../image/store2-2.jpg) no-repeat center center;}
+.gallery li:nth-child(3){background: url(../image/stores4-2.jpg) no-repeat center center;}
+.gallery li:nth-child(4){background: url(../image/stores3-2.jpg) no-repeat center center;}
+
+.gallery li:hover{
+  flex: 3;
+}
+
+.content3{
+  position: absolute;
+  bottom: 0px;
+/*   background-color:#fff; */
+  color: orange;
+  width: 100%;
+  height: 200px;
+  padding-top: 65px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: 0.5s;
+}
+.content3 p{
+  font-family: 'InkLipquid';
+  color: #222;
+  font-weight: bold;
+  font-size: 20px;
+}
+.content3 h2, p{
+  line-height: 15px;
+}/* h2랑 p 간격 좁히기 */
+.content3 h2{font-size: 28px;
+  padding-top: 15px;}
+
+.gallery li:hover .content3{bottom: 100px;
+transition-delay: 0.5s;}/* 0.5있다가 올라게해줌  */
+
+
+
+
+/* 컨텐츠4 */
+
+@keyframes circle{
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.container4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+}
+.square{
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: 0 20px;
+}
+.square span{
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border: 1px solid orange;
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+  margin-right: 800px;
+  left:10%;
+}
+.square span:nth-child(1){animation: circle 6s linear infinite;}
+.square span:nth-child(2){animation: circle 4s linear infinite reverse;}
+.square span:nth-child(3){animation: circle 10s linear infinite;}
+.square span:nth-child(4){animation: circle 10s linear infinite;}
+
+.square:hover span:nth-child(1){opacity: 0.3;}
+.square:hover span:nth-child(2){opacity: 0.6;}
+.square:hover span:nth-child(3){opacity: 0.8;}
+
+.square:nth-child(1):hover span{
+  background-color: rgb(253, 186, 124);
+  border: none;
+}
+.square:nth-child(2):hover span{
+  background-color: rgb(112, 192, 112);
+  border: none;
+}
+
+.square:nth-child(3):hover span{
+  background-color: rgb(253, 186, 124);
+  border: none;
+}
+.square:nth-child(4):hover span{
+  background-color: rgb(112, 192, 112);
+  border: none;
+}
+
+
+
+.square div{
+/*   border: 1px solid red; */
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform:  translate(-50%, -50% );
+  width: 70%;
+  text-align: center;
+  font-size: 30px;
+  color: green;
+  margin-left: 140px;
+}
+.square div p{
+  font-family: 'InkLipquid';
+  color: #fff;
+  font-size: 30px;
+  line-height: 28px;
+/*   border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.square div a{
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 20px;
+}
+.square a{
+  text-decoration: none;
+  color: brown;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+}
+
+
+
+
+/* footer */
+footer{
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  padding-top: 20px;
+/*   border: 1px solid red; */}
