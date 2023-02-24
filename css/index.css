@@ -207,7 +207,8 @@ section h3 {font-size: 20px;}
   color: green;
   font-size: 55px;}
 
-.card .content{background: linear-gradient(to top, rgb(244, 180, 63), transparent);}
+.card .content{background: linear-gradient(to top, rgb(244, 180, 63), transparent);
+  cursor: pointer;}
 
 /* 컨텐츠2 */
 #ABOUT{
@@ -251,6 +252,7 @@ section h3 {font-size: 20px;}
   padding: 10px 20px;
   box-sizing: border-box;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .container2:hover .content2{bottom: 0;}
@@ -286,6 +288,7 @@ section h3 {font-size: 20px;}
 
 .gallery li:hover{
   flex: 3;
+  cursor: pointer;
 }
 
 .content3{
@@ -391,6 +394,7 @@ transition-delay: 0.5s;}/* 0.5있다가 올라게해줌  */
   font-size: 30px;
   color: green;
   margin-left: 140px;
+  cursor: pointer;
 }
 .square div p{
   font-family: 'InkLipquid';
@@ -402,6 +406,7 @@ transition-delay: 0.5s;}/* 0.5있다가 올라게해줌  */
   justify-content: center;
   align-items: center;
   height: 60px;
+  cursor: pointer;
 }
 .square div a{
   display: inline-block;
@@ -417,8 +422,6 @@ transition-delay: 0.5s;}/* 0.5있다가 올라게해줌  */
   font-family: 'Merriweather', serif;
   font-weight: bold;
 }
-
-
 
 
 /* footer */
